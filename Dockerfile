@@ -8,5 +8,5 @@ COPY . /app
 
 EXPOSE 3000
 
-CMD ["python", "gigamesh.py"]
+CMD ["python", "bot.py"]
 
