@@ -23,3 +23,7 @@ And if deployed properly, take the public URL given to you by Cloud Run and give
 In order to interact with the bot via mentions, make sure it has the proper scopes - mainly the app_mentions:read, chat:write and chat:write.public (I think).
 
 ![img](img/bot-scopes.png)
+
+Then you can chat with it!
+
+![img](img/bot-hello.png)
