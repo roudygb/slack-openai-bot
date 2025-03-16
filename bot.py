@@ -24,13 +24,13 @@ def process_response_output(output: List) -> str:
 
 @app.event("app_mention")
 def handle_mention(event, say):
-    text = event["text"]
+    text_input = event["text"]
     try:
         response = client.responses.create(
             model="gpt-4o",
             tools=[{"type": "web_search_preview"}],
             tool_choice="auto",
-            input=INPUT,
+            input=text_input,
             instructions=INSTRUCTIONS
         )
         say(process_response_output(response.output))
