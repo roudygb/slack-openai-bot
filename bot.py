@@ -3,6 +3,7 @@ from typing import List
 from openai import OpenAI
 from slack_bolt import App
 from dotenv import load_dotenv
+from openai.types.responses.response_output_message import ResponseOutputMessage
 
 load_dotenv()
 
