@@ -9,9 +9,7 @@ load_dotenv()
 SLACK_BOT_TOKEN = os.environ.get("SLACK_BOT_TOKEN")
 SLACK_SIGNING_SECRET = os.environ.get("SLACK_SIGNING_SECRET")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
-INSTRUCTIONS =  '''
-You are a helpful bot.
-'''
+INSTRUCTIONS =  os.environ.get("INSTRUCTIONS")
 
 client = OpenAI(api_key=OPENAI_API_KEY)
 app = App(
