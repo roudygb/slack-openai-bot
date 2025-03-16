@@ -38,12 +38,5 @@ def handle_mention(event, say):
     except Exception as e:
         say(f"An error occurred: {e}")
 
-@app.message("hello")
-def message_hello(message, say):
-    # say() sends a message to the channel where the event was triggered
-    # currently a placeholder for other message workflows
-    say(f"Hey there <@{message['user']}>!")
-
-
 if __name__ == "__main__":
     app.start(port=int(os.environ.get("PORT", 3000)))
