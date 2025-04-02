@@ -1,12 +1,19 @@
-FROM python:3.12
+FROM python:3.11
 
+# Set working directory
 WORKDIR /app
-COPY requirements.txt /app
-RUN pip install -r requirements.txt
 
-COPY . /app
+# Copy and install dependencies first (layer cache optimization)
+COPY requirements.txt .
 
-EXPOSE 3000
+# Upgrade pip to avoid compatibility issues
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
+# Copy the rest of the application
+COPY . .
+
+# Expose port for Cloud Run
+EXPOSE 8080
+
+# Run the bot
 CMD ["python", "bot.py"]
-

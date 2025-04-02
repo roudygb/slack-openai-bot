@@ -174,4 +174,5 @@ cython_debug/
 .pypirc
 
 # notebooks
-notebooks
+notebooks.env
+.env.yaml

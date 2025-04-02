@@ -39,4 +39,5 @@ def handle_mention(event, say):
         say(f"An error occurred: {e}")
 
 if __name__ == "__main__":
-    app.start(port=int(os.environ.get("PORT", 3000)))
+   print("⚡️ Starting Slack bot...")
+   app.start(port=int(os.environ.get("PORT", 8080)))
